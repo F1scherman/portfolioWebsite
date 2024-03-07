@@ -2,8 +2,13 @@
 module.exports = {
   content: ["**/*.razor", "**/*.cshtml", "**/*.html"],
   theme: {
-    extend: {},
+      extend: {},
   },
-  plugins: [],
+  plugins: [
+      require("@catppuccin/tailwindcss")({
+          defaultFlavour: "macchiato",
+          prefix: "cat",
+      })
+  ],
 }
 
